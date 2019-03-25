@@ -1,9 +1,12 @@
 // Get data from php
-$(document).ready(function(){           
+//Sin usar Jquery, sino usando metodos de js nativo (vanilla) 
+
+window.onload = function(){           
     setInterval(() => {
         solicitar();   
     }, 500);
-});
+};
+
 var mymap = L.map('mapid').setView([-74.85676288604736, 11.017236142211214], 13);
 var marker = L.marker([lat, lng]).addTo(mymap);
 var latlngs = new Array();
