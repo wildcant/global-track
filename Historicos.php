@@ -6,62 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/leaflet.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.css"/>
+    <link rel="stylesheet" href="css/leaflet.css"/>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-    <script type='text/javascript'> var lat=11.017557340610484;var lng=-74.85172033309937</script>    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/moment.js"></script>
-  
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/leaflet.js"></script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
-    
+    <script src="js/import/leaflet.js"></script>
+    <script src="js/import/jquery-3.3.1.min.js"></script>
+    <script src="js/import/moment.min.js"></script>
+    <script src="js/import/popper.min.js"></script>
+    <script src="js/import/tempusdominus-bootstrap-4.js"></script>
 
+    <?php include("load.php")?>
     <title>GPS TRACK</title>
 </head>
 
 <body>
 
-<header>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<body>
+<input class="d-none" type="text"  id="d1" value="2019-3-20 8:0:0">
+<input class="d-none" type="text" id="d2" value="2019-3-20 15:30:0" >
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>  
-            </button>
-            <a class="navbar-brand" href="#">GPS Track</a>
+    <h3>Ingresar intervalo</h3>
+      <div class="col-md-5">
+        <div class="form-group">
+          <div
+            class="input-group date"
+            id="datetimepicker7"
+            data-target-input="nearest">
+            <input
+              type="text"
+              class="form-control datetimepicker-input"
+              data-target="#datetimepicker7">
+            <div
+              class="input-group-append"
+              data-target="#datetimepicker7"
+              data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+          </div>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="tiempoReal.php">Tiempo real</a></li>
-                <li class="active"><a href="Historicos.php">Historicos</a></li>
-            </ul>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+          <div
+            class="input-group date"
+            id="datetimepicker8"
+            data-target-input="nearest">
+            <input
+              type="text"
+              class="form-control datetimepicker-input"
+              data-target="#datetimepicker8"/>
+            <div
+              class="input-group-append"
+              data-target="#datetimepicker8"
+              data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+          </div>
         </div>
+        <button id="button">Enviar</button>
+      </div>
     </div>
-</nav>
-</header>
 
-<div class="container">
-<h3>Ingresar intervalo</h3>
-Fecha inicial: <input type="text"  id="text1" value="2019-03-18 18:39:45">
-<br>
-Fecha final: <input type="text" id="text2" value="2019-03-19 00:00:00" >
-<br>
-<button id="button"> Enviar  </button>
 </div>
-<br>
-
-<div class="embed-responsive-16by9">
-<div id="mapid" class=" map embed-resposive-item p-4 justify-content-center " ></div>
+<div class="">
+<div id="mapid" class=" map" ></div>
+</div>
 <script src="js/getPath.js" ></script>
-</div>
 <footer class="container">
 <p>
 <b> Proyecto 1</b><br>  
