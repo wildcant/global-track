@@ -5,42 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/leaflet.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.css"/>
+    <link rel="stylesheet" href="css/leaflet.css"/>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+    <script src="js/import/leaflet.js"></script>
+    <script src="js/import/jquery-3.3.1.min.js"></script>
+    <script src="js/import/moment.min.js"></script>
+    <script src="js/import/popper.min.js"></script>
+    <script src="js/import/bootstrap.min.js"></script>
+    <script src="js/import/tempusdominus-bootstrap-4.js"></script>
     <?php include("load.php")?>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/leaflet.js"></script>
-
+    
 </head>
 
 <body>
 <header>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar  navbar-dark bg-secondary navbar-expand-md fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>  
-            </button>
-            <a class="navbar-brand" href="#">GPS Track</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active" ><a href="index.php">Inicio</a></li>
-                <li><a href="tiempoReal.php">Tiempo real</a></li>
-                <li><a href="Historicos.php">Historicos</a></li>
-            </ul>
-        </div>
+      <a href="#" class="navbar-brand">
+        <img src="css/images/marker-icon-2x.png" alt="Logo" width="20px" height="auto" />
+        <span class="h4">GPS Track</span>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#menu-principal"
+        aria-controls="menu-principal"
+        aria-expanded="true"
+        aria-label="Despegar menú de navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal" >
+        <ul class="navbar-nav ml-auto ">
+        <li class="nav-item"><a href="index.php" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="tiempoReal.php" class="nav-link">Tiempo Real</a></li>
+          <li class="nav-item"><a href="Historicos.php" class="nav-link">Historicos</a></li>
+        </ul>
+      </div>
     </div>
-</nav>
-</header>
 
+  </nav>
+</header>
+<br>
 <div class="container">
 <h3>Posicion Geografica</h3>
     <table style="width:50%">

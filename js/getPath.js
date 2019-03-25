@@ -46,6 +46,9 @@ function getdata(){
     var latlngs = new Array();
     var val1 = $('#d1').val();
       var val2 = $('#d2').val();
+      console.log(val1);
+      console.log(val2);
+      
       $.ajax({
           type: 'POST',
           url: 'get_gps.php',
