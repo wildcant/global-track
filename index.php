@@ -95,9 +95,9 @@
 </div>
 </div>
 
-<div class="container" id="map" style="width: 600px; height: 400px;"></div>
+<div id="map" class="map"></div>
 
-<script type="text/javascript" src="js/getLocation.js"></script>
+<script type="text/javascript" src="js/getTime.js"></script>
 <footer class="container">
 <p>
 <b> Proyecto 1</b><br>
