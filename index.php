@@ -19,8 +19,8 @@
     <script src="js/import/popper.min.js"></script>
     <script src="js/import/bootstrap.min.js"></script>
     <script src="js/import/tempusdominus-bootstrap-4.js"></script>
-    <?php include("load.php")?>
-    
+    <?php include "load.php"?>
+
 </head>
 
 <body>
@@ -54,30 +54,56 @@
   </nav>
 </header>
 <br>
-<div class="container">
-<h3>Posicion Geografica</h3>
-    <table style="width:50%">
-        <tr>
-            <th>Latitud</th>
-            <th>Longitud</th>
-            <th>Fecha</th>
-        </tr>
-        <tr>
-            <td id=latitud></td>
-            <td id=longitud></th>
-            <td id=fecha></th>
-        </tr>
-    </table>
+
+<input class="d-none" type="text" id="latitud" value="-74.8514925">
+<input class="d-none" type="text" id="longitud" value="11.0194053">
+
+<div class="container justify-content-around">
+<div class="row d-flex align-items-center">
+  <div class="col-3 justify-content-center">
+    <p class="card bg-dark text-white text-center h4">Ingresar area</p>
+    <div class="text-center" >
+    <input class="text-center" type="text" id="rad" value="0.0008">    
+    </div>
+  </div>
+  <div class="col-2 ">
+  <div class="p-2">
+  <input class="btn btn-outline-dark" type="button" value="Enviar" id="button">
+  </div>
+  </div>
+  <div class="col-6 ">
+  <table class="table m-5 ">
+    <thead class="thead-dark  ">
+      <tr>
+        <th class="text-center">Tiempo inicial</th>
+        <th class="text-center">Tiempo final</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+         <input class="text-center" type="text" id="t1">
+
+        </td>
+        <td>
+          <input class="text-center" type="text" id="t2">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
 </div>
-<br>
-<div id="mapid" class="map"></div>
-<script src="js/tableMapUpdate.js" ></script>
+</div>
+
+<div class="container" id="map" style="width: 600px; height: 400px;"></div>
+
+<script type="text/javascript" src="js/getLocation.js"></script>
 <footer class="container">
 <p>
 <b> Proyecto 1</b><br>
 Diseño Electronico <br>
 2019
-</p> 
+</p>
 </footer>
 </body>
 </html>

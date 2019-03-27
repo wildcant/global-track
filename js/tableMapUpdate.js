@@ -14,14 +14,9 @@ cent=0;
 latlngs[cent]=[lat, lng];
 var plyline = L.polyline(latlngs, {color: 'blue'}).addTo(mymap);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: 'mapbox.streets'
+L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+  attribution: "OSM"
 }).addTo(mymap);
-
 function solicitar(){
     var oReq = new XMLHttpRequest();
     oReq.onreadystatechange = function() {
@@ -39,6 +34,7 @@ function solicitar(){
             cent=cent+1;
             latlngs[cent]=[latlong[0], latlong[1]];
             plyline.setLatLngs(latlngs);
+            
             mymap.fitBounds(plyline.getBounds());
         }
     }

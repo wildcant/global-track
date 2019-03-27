@@ -59,8 +59,8 @@
                    class="d-none"-->
 <input type="text" class="d-none" id="d1">
 <input type="text" class="d-none" id="d2">
-    <div class="container">
-    <h3>Ingresar intervalo</h3>
+    <div class="container ">
+    <h3 class="card-title">Ingresar intervalo</h3>
       <div class="col-md-5">
         <div class="form-group">
           <div
@@ -98,7 +98,7 @@
             </div>
           </div>
         </div>
-        <button id="button">Enviar</button>
+        <button class="btn btn-outline-dark" id="button">Enviar</button>
       </div>
     </div>
 
