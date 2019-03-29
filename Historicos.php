@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="css/leaflet.css"/>
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
 
     <script src="js/import/leaflet.js"></script>
     <script src="js/import/jquery-3.3.1.min.js"></script>
@@ -19,8 +20,10 @@
     <script src="js/import/popper.min.js"></script>
     <script src="js/import/bootstrap.min.js"></script>
     <script src="js/import/tempusdominus-bootstrap-4.js"></script>
+    <script src="js/import/jquery-ui.js"></script>
 
-    <?php include("load.php")?>
+
+    <?php include "load.php"?>
     <title>GPS TRACK</title>
 </head>
 <br>
@@ -55,58 +58,74 @@
   </nav>
 </header>
 <!-- Test values = id="d1" value="2019-3-20 8:0:0"
-                   id="d2" value="2019-3-20 15:30:0" 
+                   id="d2" value="2019-3-20 15:30:0"
                    class="d-none"-->
-<input type="text" class="d-none" id="d1">
-<input type="text" class="d-none" id="d2">
-    <div class="container ">
+
+<input type="text" class="d-none" id="d1" value="2019-3-20 8:0:0">
+<input type="text" class="d-none" id="d2" value="2019-3-20 15:30:0">
+<input type="text" class="d-none" id="array">
+<div class="container">
+<div class="row">
+  <!--  -->
+  <div class="col">
     <h3 class="card-title">Ingresar intervalo</h3>
-      <div class="col-md-5">
-        <div class="form-group">
+    <div class="col-md-12">
+      <div class="form-group">
+        <div
+          class="input-group date"
+          id="datetimepicker7"
+          data-target-input="nearest">
+          <input
+            type="text"
+            class="form-control datetimepicker-input"
+            data-target="#datetimepicker7">
           <div
-            class="input-group date"
-            id="datetimepicker7"
-            data-target-input="nearest">
-            <input
-              type="text"
-              class="form-control datetimepicker-input"
-              data-target="#datetimepicker7">
-            <div
-              class="input-group-append"
-              data-target="#datetimepicker7"
-              data-toggle="datetimepicker">
-              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-            </div>
+            class="input-group-append"
+            data-target="#datetimepicker7"
+            data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
           </div>
         </div>
-      </div>
-      <div class="col-md-5">
-        <div class="form-group">
-          <div
-            class="input-group date"
-            id="datetimepicker8"
-            data-target-input="nearest">
-            <input
-              type="text"
-              class="form-control datetimepicker-input"
-              data-target="#datetimepicker8"/>
-            <div
-              class="input-group-append"
-              data-target="#datetimepicker8"
-              data-toggle="datetimepicker">
-              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-outline-dark" id="button">Enviar</button>
       </div>
     </div>
-
+    <div class="col-md-12">
+      <div class="form-group">
+        <div
+          class="input-group date"
+          id="datetimepicker8"
+          data-target-input="nearest">
+          <input
+            type="text"
+            class="form-control datetimepicker-input"
+            data-target="#datetimepicker8"/>
+          <div
+            class="input-group-append"
+            data-target="#datetimepicker8"
+            data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline-dark" id="button">Enviar</button>
+    </div>
+  </div>
+  <div class="col d-flex flex-wrap align-content-center justify-content-center">
+    <button class="btn btn-outline-dark" id="button2">marker</button>
+  </div>
+  <div class="col d-flex flex-wrap align-content-center justify-content-center">
+    <h3 class="card-title p-2 d-none" id="indice">Indice</h3>
+    <input type="text" class="p-2 d-none" name="" id="spinner">
+    <button class="btn btn-outline-dark d-none" id="button3">Salir</button>
+  </div>
 </div>
+</div>
+<br>
+
 <div class="">
 <div id="mapid" class=" map" ></div>
 </div>
 <script src="js/getPath.js" ></script>
+
 <footer class="container">
 <p>
 <b> Proyecto 1</b><br>

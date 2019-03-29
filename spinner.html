@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+
+    <script src="js/import/jquery-3.3.1.min.js"></script>
+    <script src="js/import/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <input type="text" value="" name="" id="spinner">
+    <input type="button" name="" id="show">
+    <script>
+        var sp = $("#spinner").spinner();
+        $("#spinner").on("spinstop", function() {
+            console.log(sp.spinner("value"));
+            sp.spinner("option", "min", 0);
+            sp.spinner("option", "max", 4);
+        });
+    </script>
+
+</body>
+
+</html>
