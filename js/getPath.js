@@ -74,6 +74,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: 'OSM' })
 function getdata() {
     marker.setOpacity(0);
     var latlngs = new Array();
+    var time = new Array();
+
     var val1 = $("#d1").val();
     var val2 = $("#d2").val();
 
@@ -82,16 +84,22 @@ function getdata() {
         url: "get_gps.php",
         data: { text1: val1, text2: val2 },
         success: function(data) {
-            var duos = data.split(" ");
+            var duos = data.split(",");
 
             let cont = 0;
             let j = 0;
-            for (let i = 0; i < duos.length - 1; i += 2) {
+            let k = 0;
+            for (let i = 0; i < duos.length - 1; i += 3) {
                 j = i + 1;
+                k = j + 1;
                 latlngs[cont] = [parseFloat(duos[j]), parseFloat(duos[i])];
+                time[cont] = duos[k];
+
                 cont++;
             }
             $("#array").val(latlngs);
+            $("#tarray").val(time);
+
             if (latlngs.length > 0) {
                 plyline.setLatLngs(latlngs);
                 mymap.fitBounds(plyline.getBounds());
@@ -112,6 +120,9 @@ function getT() {
     $('#indice').removeClass('d-none');
     $('#spinner').removeClass('d-none');
     $('#button3').removeClass('d-none');
+    $('#t1').removeClass('d-none');
+
+    var time = $("#tarray").val().split(",");
     var duos = $("#array").val().split(",");
     let cont = 0;
     let j = 0;
@@ -127,10 +138,9 @@ function getT() {
     //init pos for marker
     $("#spinner").on("spinstop", function() {
         let pos = sp.spinner("value");
-        console.log(pos);
         marker.setLatLng({ lat: latlngs[pos][1], lng: latlngs[pos][0] })
-        console.log(latlngs[pos][1], latlngs[pos][0]);
         marker.setOpacity(1);
+        $("#t1").val(time[pos])
     });
 
 }
@@ -139,4 +149,5 @@ function delMark() {
     $('#indice').addClass('d-none');
     $('#spinner').addClass('d-none');
     $('#button3').addClass('d-none');
+    $('#t1').addClass('d-none');
 }

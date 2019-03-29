@@ -64,6 +64,9 @@
 <input type="text" class="d-none" id="d1" value="2019-3-20 8:0:0">
 <input type="text" class="d-none" id="d2" value="2019-3-20 15:30:0">
 <input type="text" class="d-none" id="array">
+<input type="text" class="d-none" id="tarray">
+
+
 <div class="container">
 <div class="row">
   <!--  -->
@@ -115,6 +118,7 @@
   <div class="col d-flex flex-wrap align-content-center justify-content-center">
     <h3 class="card-title p-2 d-none" id="indice">Indice</h3>
     <input type="text" class="p-2 d-none" name="" id="spinner">
+    <input class="text-center d-none" type="text" id="t1">
     <button class="btn btn-outline-dark d-none" id="button3">Salir</button>
   </div>
 </div>
