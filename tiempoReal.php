@@ -20,7 +20,14 @@
     <script src="js/import/tempusdominus-bootstrap-4.js"></script>
 
     <?php include("load.php")?>
-    <title>GPS TRACK</title>
+    <title>GLOBAL TRACK</title>
+    <style>
+    .navbar{
+      background: #292731!important;
+      color: #AFA38D!important;
+    }
+    
+    </style>
 
 </head>
 
@@ -30,8 +37,8 @@
   <nav class="navbar  navbar-dark bg-secondary navbar-expand-md fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand">
-        <img src="css/images/marker-icon-2x.png" alt="Logo" width="20px" height="auto" />
-        <span class="h4">GPS Track</span>
+        <img src="css/images/slogan.jpg" alt="Logo" width="210px" height="auto" />
+        
       </a>
       <button
         type="button"
@@ -55,34 +62,114 @@
 
   </nav>
 </header>
-<br>
+<section id="mapa">
+  <div id="espacio">
+    <br>
+  </div>
+        <div id="mapa-texto">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Global Track</h1>
+                    <p>Seguimiento GPS y busqueda por historicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>   
+
+        <section id="contenido">
+        <div class="contenido-seccion">
+            <div class="row">
+                <div class="col-md-4">
+                <img src="css/images/circle.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="texto1">
+                        <h3 id='rojo' class=text-center>En cualquier parte del mundo</h3>
+                        <p id='blanco' class=text-justify>Global Track es un seguidor GPS diseñado para monitorear la posición de un vehículo en cualquier parte del mundo. También, se tiene informacion pasada de los vehículos para un mejor analisis</p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="texto2">
+                    <img src="css/images/circle2.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 id='rojo' class=text-center>Fácil de leer, Fácil de usar</h3>
+                        <p id='blanco' class=text-justify>Usando una aplicación móvil se puede seguir la ubicacion en esta página usando el enlace Tiempo Real. </p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="texto3">
+                    <img src="css/images/circle3.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 id='rojo' class=text-center>Seguimiento GPS</h3>
+                        <p id='blanco' class=text-justify>En el enlace Históricos, se tiene informacion de los lugares y momentos en los que estubo el vehículo. Solo hay que selccionar el intervalo de tiempo requerido, o usar la opción marker para averiguar por ubicación.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<div class="container">
-<h3>Posicion Geografica</h3>
-    <table style="width:50%">
-        <tr>
-            <th>Latitud</th>
-            <th>Longitud</th>
-            <th>Fecha</th>
-        </tr>
-        <tr>
-            <td id=latitud></td>
-            <td id=longitud></th>
-            <td id=fecha></th>
-        </tr>
-    </table>
-</div><br>
+<section id='localizacion'>
+       <div class="container">
+         <h1 class=text-center id='rojo' >Posicion Geografica</h1>
+          <br>
+          <div class="row">
+          <div class="col-md-4">
+            <table style="width:50%">
+                <tr>
+                    <th>Latitud:</th>
+                
+                    <td id=latitud></th>
+                    </tr><tr>
+                    <th>Longitud:</th>
+                    
+                    <td id=longitud></th>
+                    </tr><tr>
+                    <th>Fecha:</th>
+                
+                    <td id=fecha></th>
+                </tr>
+            </table>
+      
+            </div>
 
+              <div class="col-md-8">
+                <div id="mapid" class="map"></div>
+                <script src="js/tableMapUpdate.js" ></script>
+              </div>
+        </div>
+      </div>
+</section>
 
-<div id="mapid" class="map"></div>
-<script src="js/tableMapUpdate.js" ></script>
-<Footer class="container">
-<p>
-    <b> Proyecto 1</b><br>
-    Diseño Electronico <br>
-    2019
-</p> 
-</Footer>
+<section id='footer'>
+  <Footer class="container">
+  <div class="footertexto">
+            <div class="row">
+                <div class="col-md-4">
+                <p>
+                    <b> Proyecto 2</b><br>
+                    Diseño Electronico <br>
+                    Universidad del norte <br>
+                    2019<br>
+                </p> 
+                </div>
+                <div class="col-md-4">
+                <p>
+                    <b> Desarrolladores:</b><br>
+                    Wilmer Cantillo<br>
+                    Hermes Garcia<br>
+                    Daniela Polo<br>
+                </p> 
+                </div>
+                <div class="col-md-4">
+                <p>
+                    <b> Correos:</b><br>
+                    cwilmer@uninorte.edu.co<br>
+                    alvizh@uninorte.edu.co<br>
+                    dapolo@uninorte.edu.co<br>
+                </p> 
+                </div>
+            </div>
+        </div>
+  </Footer>
+</section>  
 </body> 
 </html>

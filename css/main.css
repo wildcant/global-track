@@ -1,14 +1,60 @@
 body {
-  padding-top: 50px;
+    height: 100%;
+  }
+  
+  images {
+      max-width: 100%;
+  }
+  .map{
+    margin-left: auto;
+    margin-right: auto; 
+    width: 600px;
+    height: 400px;
+  }
+  #mapa {
+      background: #222 url('../css/images/mapa5.png') center center no-repeat;
+      background-size: cover;
+      color: rgb(252, 1, 1);
+      height: 100%;
+      text-align: center;
+      align-items: center;
+  }
+  #espacio{
+    padding:17rem;
+  }
+  #mapa-texto {
+      width: 100%;
+      padding: 2rem;
+      
+  }
+  #contenido{
+      background: #292731;
+      
+  }
+  .contenido-seccion {
+    padding: 2.5rem 0;
+    margin-left: 8rem;
+    margin-right: 8rem;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+#blanco{
+    color: white;
 }
-
-.map{
-  margin-left: auto;
-  margin-right: auto; 
-  width: 600px;
-  height: 400px;
+#rojo{
+    color: rgb(255, 0, 0);
 }
+#footer {
+    background: #292731;
+    color: white;
+    font-size: 0.8rem;
+    padding: 1rem; 
+}
+#localizacion{
+    padding: 2.5rem;
+}
+#info{
+    padding: 10rem
+}
+#histo{
+    padding: 2.5rem;
+}
+  

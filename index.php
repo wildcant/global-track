@@ -1,4 +1,4 @@
-<!-- Hermes Update-->
+<!-- Hermes Front end Update-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +21,14 @@
     <script src="js/import/bootstrap.min.js"></script>
     <script src="js/import/tempusdominus-bootstrap-4.js"></script>
     <?php include "load.php"?>
+    <title>GLOBAL TRACK</title>
+    <style>
+    .navbar{
+      background: #292731!important;
+      color: #AFA38D!important;
+    }
+    
+    </style>
 
 </head>
 
@@ -29,8 +37,7 @@
   <nav class="navbar  navbar-dark bg-secondary navbar-expand-md fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand">
-        <img src="css/images/marker-icon-2x.png" alt="Logo" width="20px" height="auto" />
-        <span class="h4">GPS Track</span>
+      <img src="css/images/slogan.jpg" alt="Logo" width="210px" height="auto" />
       </a>
       <button
         type="button"
@@ -54,57 +61,101 @@
 
   </nav>
 </header>
-<br>
-
-<input class="d-none" type="text" id="latitud" value="-74.8514925">
-<input class="d-none" type="text" id="longitud" value="11.0194053">
-
-<div class="container justify-content-around">
-<div class="row d-flex align-items-center">
-  <div class="col-3 justify-content-center">
-    <p class="card bg-dark text-white text-center h4">Ingresar area</p>
-    <div class="text-center" >
-    <input class="text-center" type="text" id="rad" value="0.0008">    
-    </div>
+<section id="mapa">
+  <div id="espacio">
+    <br>
   </div>
-  <div class="col-2 ">
-  <div class="p-2">
-  <input class="btn btn-outline-dark" type="button" value="Enviar" id="button">
-  </div>
-  </div>
-  <div class="col-6 ">
-  <table class="table m-5 ">
-    <thead class="thead-dark  ">
-      <tr>
-        <th class="text-center">Tiempo inicial</th>
-        <th class="text-center">Tiempo final</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-         <input class="text-center" type="text" id="t1">
+        <div id="mapa-texto">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Global Track</h1>
+                    <p>Seguimiento GPS y busqueda por historicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>   
 
-        </td>
-        <td>
-          <input class="text-center" type="text" id="t2">
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-</div>
-</div>
+        <section id="contenido">
+        <div class="contenido-seccion">
+            <div class="row">
+                <div class="col-md-4">
+                <img src="css/images/circle.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="texto1">
+                        <h3 id='rojo' class=text-center>En cualquier parte del mundo</h3>
+                        <p id='blanco' class=text-justify>Global Track es un seguidor GPS diseñado para monitorear la posición de un vehículo en cualquier parte del mundo. También, se tiene informacion pasada de los vehículos para un mejor analisis</p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="texto2">
+                    <img src="css/images/circle2.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 id='rojo' class=text-center>Fácil de leer, Fácil de usar</h3>
+                        <p id='blanco' class=text-justify>Usando una aplicación móvil se puede seguir la ubicacion en esta página usando el enlace Tiempo Real. </p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="texto3">
+                    <img src="css/images/circle3.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 id='rojo' class=text-center>Seguimiento GPS</h3>
+                        <p id='blanco' class=text-justify>En el enlace Históricos, se tiene informacion de los lugares y momentos en los que estubo el vehículo. Solo hay que selccionar el intervalo de tiempo requerido, o usar la opción marker para averiguar por ubicación.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div id="map" class="map"></div>
 
-<script type="text/javascript" src="js/getTime.js"></script>
-<footer class="container">
-<p>
-<b> Proyecto 1</b><br>
-Diseño Electronico <br>
-2019
-</p>
-</footer>
-</body>
+<section id='info'>
+       <div class="container">
+         
+          <br>
+          <div class="row">
+          <div class="col-md-6">
+          <img src="css/images/logo3.jpg" class="img-fluid" alt="Responsive image">
+            
+            </div>
+
+              <div class="col-md-6">
+              <h3 class=text-center id='rojo' >Global Track</h3>
+            <p class=text-justify> Con el seguimiento, monitoreo y almacenamiento de información por posición de GPS, Global Track pretende solucionar los problemas de empresas dedicadas al transporte por camiones. Problemas como la perdida innecesaria de combustible, o posibles robos. </p>
+      
+              </div>
+        </div>
+      </div>
+</section>
+
+<section id='footer'>
+  <Footer class="container">
+  <div class="footertexto">
+            <div class="row">
+                <div class="col-md-4">
+                <p>
+                    <b> Proyecto 2</b><br>
+                    Diseño Electronico <br>
+                    Universidad del norte <br>
+                    2019<br>
+                </p> 
+                </div>
+                <div class="col-md-4">
+                <p>
+                    <b> Desarrolladores:</b><br>
+                    Wilmer Cantillo<br>
+                    Hermes Garcia<br>
+                    Daniela Polo<br>
+                </p> 
+                </div>
+                <div class="col-md-4">
+                <p>
+                    <b> Correos:</b><br>
+                    cwilmer@uninorte.edu.co<br>
+                    alvizh@uninorte.edu.co<br>
+                    dapolo@uninorte.edu.co<br>
+                </p> 
+                </div>
+            </div>
+        </div>
+  </Footer>
+</section>  
+</body> 
 </html>

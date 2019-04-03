@@ -24,7 +24,13 @@
 
 
     <?php include "load.php"?>
-    <title>GPS TRACK</title>
+    <title>GLOBAL TRACK</title>
+    <style>
+    .navbar{
+      background: #292731!important;
+      color: #AFA38D!important;
+    }
+    </style>
 </head>
 <br>
 <body>
@@ -32,8 +38,8 @@
   <nav class="navbar  navbar-dark bg-secondary navbar-expand-md fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand">
-        <img src="css/images/marker-icon-2x.png" alt="Logo" width="20px" height="auto" />
-        <span class="h4">GPS Track</span>
+      <img src="css/images/slogan.jpg" alt="Logo" width="210px" height="auto" />
+        
       </a>
       <button
         type="button"
@@ -57,10 +63,54 @@
 
   </nav>
 </header>
+<section id="mapa">
+  <div id="espacio">
+    <br>
+  </div>
+        <div id="mapa-texto">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Global Track</h1>
+                    <p>Seguimiento GPS y busqueda por historicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>   
+
+        <section id="contenido">
+        <div class="contenido-seccion">
+            <div class="row">
+                <div class="col-md-4">
+                <img src="css/images/circle.jpg" class="img-fluid" alt="Responsive image">
+                    <div class="texto1">
+                        <h3 id='rojo' class=text-center>En cualquier parte del mundo</h3>
+                        <p id='blanco' class=text-justify>Global Track es un seguidor GPS diseñado para monitorear la posición de un vehículo en cualquier parte del mundo. También, se tiene informacion pasada de los vehículos para un mejor analisis</p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="texto2">
+                    <img src="css/images/circle2.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 id='rojo' class=text-center>Fácil de leer, Fácil de usar</h3>
+                        <p id='blanco' class=text-justify>Usando una aplicación móvil se puede seguir la ubicacion en esta página usando el enlace Tiempo Real. </p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="texto3">
+                    <img src="css/images/circle3.jpg" class="img-fluid" alt="Responsive image">
+                        <h3 id='rojo' class=text-center>Seguimiento GPS</h3>
+                        <p id='blanco' class=text-justify>En el enlace Históricos, se tiene informacion de los lugares y momentos en los que estubo el vehículo. Solo hay que selccionar el intervalo de tiempo requerido, o usar la opción marker para averiguar por ubicación.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <!-- Test values = id="d1" value="2019-3-20 8:0:0"
                    id="d2" value="2019-3-20 15:30:0"
                    class="d-none"-->
-
+<section id='histo'>
 <input type="text" class="d-none" id="d1" value="2019-3-20 8:0:0">
 <input type="text" class="d-none" id="d2" value="2019-3-20 15:30:0">
 <input type="text" class="d-none" id="array">
@@ -129,13 +179,38 @@
 <div id="mapid" class=" map" ></div>
 </div>
 <script src="js/getPath.js" ></script>
-
-<footer class="container">
-<p>
-<b> Proyecto 1</b><br>
-Diseño Electronico <br>
-2019
-</p>
-</footer>
-</body>
+  </section>
+<section id='footer'>
+  <Footer class="container">
+  <div class="footertexto">
+            <div class="row">
+                <div class="col-md-4">
+                <p>
+                    <b> Proyecto 2</b><br>
+                    Diseño Electronico <br>
+                    Universidad del norte <br>
+                    2019<br>
+                </p> 
+                </div>
+                <div class="col-md-4">
+                <p>
+                    <b> Desarrolladores:</b><br>
+                    Wilmer Cantillo<br>
+                    Hermes Garcia<br>
+                    Daniela Polo<br>
+                </p> 
+                </div>
+                <div class="col-md-4">
+                <p>
+                    <b> Correos:</b><br>
+                    cwilmer@uninorte.edu.co<br>
+                    alvizh@uninorte.edu.co<br>
+                    dapolo@uninorte.edu.co<br>
+                </p> 
+                </div>
+            </div>
+        </div>
+  </Footer>
+</section>  
+</body> 
 </html>
