@@ -20,7 +20,7 @@
     <script src="js/import/popper.min.js"></script>
     <script src="js/import/bootstrap.min.js"></script>
     <script src="js/import/tempusdominus-bootstrap-4.js"></script>
-    <?php include "load.php"?>
+    <!-- <?php include "load.php"?> -->
     <title>GLOBAL TRACK</title>
     <style>
     .navbar{
