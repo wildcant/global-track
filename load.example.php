@@ -1,8 +1,8 @@
 <?php
-$server_name="m001.civuexhbxgux.us-east-1.rds.amazonaws.com:3306";
-$dbname="M001";
-$username = "Will";
-$password = "CB27d277";
+$server_name="";
+$dbname="";
+$username = "";
+$password = "";
 // Create connection
 $conn = mysqli_connect($server_name, $username, $password, $dbname);
 // Check connection
